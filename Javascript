@@ -1,0 +1,27 @@
+```javascript
+// Toggle mobile menu
+function toggleMenu() {
+  const nav = document.getElementById('nav-links');
+  nav.classList.toggle('active');
+}
+
+// Form submission
+function submitForm(event) {
+  event.preventDefault(); // prevent default page reload
+  alert("Thank you for contacting me! I’ll get back to you soon.");
+  document.getElementById("contact-form").reset();
+}
+
+// Scroll to top
+window.onscroll = function () {
+  const btn = document.getElementById("topBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
